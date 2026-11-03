@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ashray Living | Furniture made easy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F4F0;--surface:#FFF;--sand:#EADDC8;--border:#E3DDD3;--text:#0B2341;--muted:#4F6076;--accent:#4E7FD9;--accent-dark:#2F5FB8;--accent-soft:#E7F1FF;--on-accent:#FFF;--secondary:#8C5235;--radius:10px}
+*{box-sizing:border-box;margin:0}
+body{font-family:Roboto,system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:17px;line-height:1.5;transition:background .4s,color .4s}
+.serif{font-family:Poppins,system-ui,sans-serif;font-weight:500;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.bar{background:var(--bg);border-bottom:1px solid var(--border);text-align:center;font-size:14px;padding:10px}
+.bar b{text-decoration:underline}
+header{position:sticky;top:0;z-index:20;background:var(--bg);display:flex;align-items:center;gap:36px;padding:14px 56px}
+.logo{font-size:34px;font-weight:700;letter-spacing:-.04em;color:var(--accent)}
+header nav{display:flex;gap:32px;font-weight:600;color:var(--muted);flex:1}
+.search{border:1px solid var(--border);border-radius:99px;padding:9px 18px;min-width:170px;font-size:14px;color:var(--muted);background:var(--surface)}
+.icons{display:flex;gap:14px;color:var(--muted)}
+.hero{position:relative;height:min(78vh,720px);display:flex;align-items:flex-end;padding:56px;color:#fff;overflow:hidden;background:linear-gradient(120deg,var(--secondary),var(--accent-dark) 70%)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 70% 40%,rgba(255,255,255,.18),transparent 60%),linear-gradient(to top,rgba(0,0,0,.45),transparent 55%)}
+.hero>div{position:relative}
+.hero h1{font-size:clamp(44px,6vw,84px);line-height:1}
+.hero p{margin:10px 0 0;font-size:18px;opacity:.9}
+.pill{display:inline-block;margin-top:22px;background:var(--accent);color:var(--on-accent);padding:11px 24px;border-radius:99px;font-weight:600;font-size:16px;transition:background .2s}
+.pill:hover{background:var(--accent-dark)}
+.tag{display:inline-block;background:rgba(255,255,255,.25);backdrop-filter:blur(6px);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:10px}
+.cats{display:flex;gap:10px;padding:22px 56px;overflow:auto}
+.cats a{border:1px solid var(--border);background:var(--surface);padding:9px 20px;border-radius:99px;font-weight:600;white-space:nowrap}
+.rooms{display:grid;grid-template-columns:1fr 1.9fr;gap:48px;padding:64px 56px;align-items:center}
+.rooms h2{font:600 24px Poppins;color:var(--muted);margin-bottom:28px}
+.rooms li{list-style:none;font-size:clamp(34px,4vw,52px);line-height:1.5;color:var(--text);opacity:.45;cursor:pointer;transition:opacity .2s;font-family:Poppins,system-ui,sans-serif;font-weight:500}
+.rooms li.on,.rooms li:hover{opacity:1}
+.ph{border-radius:24px;aspect-ratio:16/10;background:linear-gradient(135deg,var(--sand),var(--accent-soft));display:grid;place-items:end start;padding:22px;color:var(--muted);font-size:13px}
+.feature{position:relative;height:min(75vh,640px);display:flex;align-items:flex-end;padding:56px;color:#fff;overflow:hidden}
+.feature::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5),transparent 60%)}
+.feature>div{position:relative;max-width:640px}
+.feature h2{font-size:clamp(40px,5vw,64px);line-height:1.02}
+.f1{background:linear-gradient(135deg,var(--accent-dark),var(--secondary))}
+.f2{background:linear-gradient(135deg,var(--sand),var(--accent))}
+.tabs{padding:64px 56px}
+.tabs .row{display:flex;gap:32px;margin-bottom:28px;flex-wrap:wrap}
+.tabs h3{font-size:34px;font-weight:400;opacity:.4;cursor:pointer}.tabs h3.on{opacity:1}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card .ph{aspect-ratio:1;border-radius:16px;margin-bottom:12px}
+.card b{display:block}.card span{color:var(--muted);font-size:15px}
+.sw{display:flex;gap:5px;margin-top:6px}.sw i{width:14px;height:14px;border-radius:50%;border:1px solid var(--border)}
+.loc{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;padding:40px 56px 72px;align-items:center}
+.loc h2{font:600 24px Poppins;color:var(--muted);margin-bottom:24px}.loc li{list-style:none;font-size:clamp(30px,3.4vw,44px);line-height:1.45;opacity:.5}.loc li:first-of-type{opacity:1}
+.inno{background:var(--accent-soft);padding:80px 56px;text-align:center}
+.inno h2{font-size:clamp(40px,5vw,64px);margin-bottom:10px;line-height:1.05}
+.usp{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:56px;border-top:1px solid var(--border)}
+.usp b{display:block;margin-bottom:4px}.usp span{color:var(--muted);font-size:15px}
+footer{background:var(--text);color:var(--bg);padding:48px 56px;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;font-size:15px}
+footer .logo{color:var(--bg)}
+#picker{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:12px 14px;box-shadow:0 8px 30px rgba(0,0,0,.18);font-size:13px;display:flex;align-items:center;gap:10px}
+#picker input{width:44px;height:34px;border:0;padding:0;background:none;cursor:pointer}
+#picker code{color:var(--muted)}
+@media(max-width:800px){header{padding:12px 20px;gap:14px}header nav,.search{display:none}.hero,.feature,.rooms,.tabs,.loc,.inno,.usp,footer,.cats{padding-left:20px;padding-right:20px}.rooms,.loc{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.usp{grid-template-columns:1fr 1fr}.icons{margin-left:auto}}
+.pill{position:relative;overflow:hidden;font-family:Poppins,sans-serif;background:linear-gradient(165deg,var(--accent) 0%,var(--accent-dark) 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -3px 8px rgba(0,0,0,.2),0 12px 24px -10px var(--accent-dark)}
+.pill:before{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .7s}.pill:hover:before{left:130%}
+.logo,header nav,h3,.tag{font-family:Poppins,sans-serif}
+button,input,textarea,select,code{font-family:inherit}
+</style>
+</head>
+<body>
+<div class="bar">Designed at home. <b>About us</b></div>
+<header><a class="logo" href="#">ashray</a><nav><a>Sofas</a><a>Products</a><a>Rooms</a><a>Rugs</a><a>Explore</a></nav><div class="search">Search</div><div class="icons"><span>Help</span><span>Account</span><span>Bag</span></div></header>
+
+<section class="hero"><div><h1 class="serif">Make yourself at home.</h1><p>Solid wood furniture, delivered and assembled free.</p><a class="pill" href="#">Shop New Arrivals</a></div></section>
+<div class="cats"><a>Modular Seating</a><a>Sofa-Beds</a><a>Bedroom</a><a>Dining</a><a>Tables</a><a>Chairs</a><a>Storage</a><a>Rugs</a></div>
+
+<section class="feature f1"><div><span class="tag">NEW</span><h2 class="serif">Spill-proof luxury.</h2><p>Our best-selling collections, now in performance velvet.</p><a class="pill" href="#">Shop Seating</a></div></section>
+
+<section class="rooms"><div><h2>Shop by room</h2><ul id="roomList"><li class="on">Living Room</li><li>Bedroom</li><li>Dining Room</li></ul></div><div class="ph" id="roomImg">Living Room photo placeholder</div></section>
+
+<section class="feature f2"><div><span class="tag">NEW</span><h2 class="serif">Ara Bed, now in wood.</h2><p>Solid sheesham, hand-joined, built to last decades.</p><a class="pill" href="#">Discover Ara</a></div></section>
+
+<section class="tabs"><div class="row serif"><h3 class="on">Best Sellers</h3><h3>New Arrivals</h3><h3>Bundle &amp; Save</h3></div>
+<div class="grid" id="grid"></div></section>
+
+<section class="loc"><div><h2>Our locations</h2><ul class="serif"><li>Mumbai</li><li>Delhi</li><li>Bengaluru</li><li>Pune</li></ul></div><div class="ph" style="aspect-ratio:16/9">Store photo placeholder</div></section>
+
+<section class="inno"><h2 class="serif">Made by artisans, designed for real life.</h2><p>Free design consultation, swatches and a 5-year warranty.</p><a class="pill" href="#">Explore our craft</a></section>
+
+<section class="usp"><div><b>Free delivery</b><span>White-glove, 300+ cities</span></div><div><b>Free swatches</b><span>Feel it before you buy</span></div><div><b>5-year warranty</b><span>Plus 7-day returns</span></div><div><b>Free consultation</b><span>A designer, on call</span></div></section>
+<footer><div><div class="logo">ashray</div><p>Furniture made easy.</p></div><div>Help · Shipping · Returns · Warranty</div><div>© 2026 Ashray Living</div></footer>
+
+<div id="picker"><label for="base">Brand color</label><input id="base" type="color" value="#4E7FD9"><code id="hexOut">#4E7FD9</code></div>
+
+<script>
+// theme-generator.js - one base colour in, full theme out. No dependencies.
+// Usage: node theme-generator.js "#C4572F"  ->  prints theme JSON (light + dark + CSS vars)
+
+// ---------- colour math (sRGB <-> OKLab/OKLCH, Bjorn Ottosson) ----------
+const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+const toLin = c => (c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
+const toGam = c => (c <= 0.0031308 ? 12.92 * c : 1.055 * c ** (1 / 2.4) - 0.055);
+
+function hexToRgb(hex) {
+  const h = hex.replace('#', '');
+  const n = parseInt(h.length === 3 ? h.replace(/./g, '$&$&') : h, 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255].map(v => v / 255);
+}
+function rgbToOklch([r, g, b]) {
+  [r, g, b] = [r, g, b].map(toLin);
+  const l = Math.cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b);
+  const m = Math.cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b);
+  const s = Math.cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b);
+  const L = 0.2104542553 * l + 0.793617785 * m - 0.0040720468 * s;
+  const A = 1.9779984951 * l - 2.428592205 * m + 0.4505937099 * s;
+  const B = 0.0259040371 * l + 0.7827717662 * m - 0.808675766 * s;
+  return { L, C: Math.hypot(A, B), H: ((Math.atan2(B, A) * 180) / Math.PI + 360) % 360 };
+}
+function oklchToLinRgb({ L, C, H }) {
+  const a = C * Math.cos((H * Math.PI) / 180), b = C * Math.sin((H * Math.PI) / 180);
+  const l = (L + 0.3963377774 * a + 0.2158037573 * b) ** 3;
+  const m = (L - 0.1055613458 * a - 0.0638541728 * b) ** 3;
+  const s = (L - 0.0894841775 * a - 1.291485548 * b) ** 3;
+  return [
+    4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s,
+    -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s,
+    -0.0041960863 * l - 0.7034186147 * m + 1.707614701 * s,
+  ];
+}
+const inGamut = c => oklchToLinRgb(c).every(v => v >= -0.0005 && v <= 1.0005);
+// Gamut clamp: keep L and H, lower chroma until the colour fits in sRGB.
+function fit(c) {
+  let { L, C, H } = c; L = clamp(L, 0, 1);
+  while (C > 0 && !inGamut({ L, C, H })) C -= 0.002;
+  return { L, C: Math.max(C, 0), H: ((H % 360) + 360) % 360 };
+}
+const toHex = c => '#' + oklchToLinRgb(fit(c)).map(v => Math.round(clamp(toGam(clamp(v, 0, 1)), 0, 1) * 255).toString(16).padStart(2, '0')).join('').toUpperCase();
+
+// WCAG 2.x: Y = 0.2126R + 0.7152G + 0.0722B (linear);  ratio = (Y1+0.05)/(Y2+0.05)
+const lum = hex => { const [r, g, b] = hexToRgb(hex).map(toLin); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+
+// Nudge lightness of `c` away from `bg` until contrast >= target.
+function ensureContrast(c, bgHex, target = 4.5) {
+  const dir = lum(bgHex) > 0.4 ? -1 : 1; let x = { ...c };
+  for (let i = 0; i < 100 && contrast(toHex(x), bgHex) < target; i++) x.L = clamp(x.L + dir * 0.01, 0, 1);
+  return x;
+}
+const onColor = hex => (contrast(hex, '#FFFFFF') >= contrast(hex, '#1A1A1A') ? '#FFFFFF' : '#1A1A1A');
+
+// ---------- the theme equations ----------
+function generateTheme(baseHex) {
+  const b = rgbToOklch(hexToRgb(baseHex));
+  const H = b.H;
+  const C = Math.max(b.C, 0.06);                       // floor so greys still get a visible accent
+  const warm = H < 110 || H >= 330;                    // reds/oranges/yellows/magentas
+  const make = mode => {
+    const dark = mode === 'dark';
+    // 60% - background / surface: base hue, almost no chroma
+    const bg      = { L: dark ? 0.18 : 0.97, C: clamp(C * 0.07, 0.004, 0.012), H };
+    const surface = { L: dark ? 0.22 : 0.995, C: clamp(C * 0.05, 0.002, 0.012), H };
+    const bgHex = toHex(bg);
+    // 30% - secondary neutral ("sand"): hue drifts -10 deg, low chroma
+    const sand = { L: dark ? 0.28 : 0.90, C: clamp(C * 0.20, 0.01, 0.045), H: H - 10 };
+    // text: same hue, near-zero chroma, contrast >= 7 (AAA) on bg
+    const text  = ensureContrast({ L: dark ? 0.95 : 0.22, C: 0.015, H }, bgHex, 7);
+    const muted = ensureContrast({ L: dark ? 0.72 : 0.50, C: 0.02, H }, bgHex, 4.5);
+    // 10% - accent: the base colour, L clamped to a usable band; shifted in dark mode
+    const accent = ensureContrast({ L: dark ? clamp(b.L + 0.12, 0.62, 0.80) : clamp(b.L, 0.48, 0.62), C: dark ? C * 0.85 : C, H }, bgHex, 3);
+    // light mode: button text is white, so darken accent until white-on-accent >= 4.5
+    while (!dark && contrast(toHex(accent), '#FFFFFF') < 4.5 && accent.L > 0.3) accent.L -= 0.005;
+    const accentHex = toHex(accent);
+    const accentDark = { ...accent, L: accent.L + (dark ? 0.08 : -0.10), C: accent.C * 0.95 };
+    // glossy shades: lighter highlight, deeper shadow, lifted text for gradients
+    const accentLight = { ...accent, L: clamp(accent.L + (dark ? 0.08 : 0.16), 0, 0.92), C: accent.C * 0.8 };
+    const accentDeep = { ...accent, L: clamp(accent.L - 0.2, 0.12, 1), C: accent.C * 0.9 };
+    const textLight = { ...text, L: clamp(text.L + (dark ? -0.1 : 0.14), 0, 1) };
+    const accentSoft = { L: dark ? 0.30 : 0.94, C: clamp(C * 0.22, 0.02, 0.06), H };
+    // secondary accent: split-complementary (H+150), 60% chroma
+    const second = ensureContrast({ L: dark ? 0.72 : 0.50, C: C * 0.6, H: H + 150 }, bgHex, 3);
+    const border = { L: dark ? 0.32 : 0.86, C: clamp(C * 0.1, 0.005, 0.02), H };
+    // status colours: fixed hues, chroma borrowed from the accent so they feel on-brand
+    const status = (h) => toHex(ensureContrast({ L: dark ? 0.75 : 0.52, C: clamp(C * 0.9, 0.08, 0.16), H: h }, bgHex, 3));
+    return {
+      background: bgHex, surface: toHex(surface), sand: toHex(sand), border: toHex(border),
+      text: toHex(text), muted: toHex(muted),
+      accent: accentHex, accentDark: toHex(accentDark), accentSoft: toHex(accentSoft), accentLight: toHex(accentLight), accentDeep: toHex(accentDeep), textLight: toHex(textLight), onAccent: onColor(accentHex),
+      secondary: toHex(second),
+      success: status(150), warning: status(80), danger: status(25), info: status(240),
+    };
+  };
+  // 10-step tonal scale: L runs 0.97 -> 0.25, chroma follows a sine bell peaking mid-scale
+  const steps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+  const scale = {};
+  steps.forEach((s, i) => {
+    const t = i / (steps.length - 1);
+    scale[s] = toHex({ L: 0.97 - 0.72 * t, C: C * (0.25 + 0.75 * Math.sin(Math.PI * clamp(t * 0.9 + 0.05, 0, 1))), H });
+  });
+  // type & shape follow colour temperature and chroma
+  const fonts = warm ? { heading: 'Fraunces', body: 'Inter' } : { heading: 'Manrope', body: 'Inter' };
+  const radius = C > 0.14 ? '10px' : C > 0.08 ? '6px' : '2px';  // punchier colour -> softer corners
+  const light = make('light'), dark = make('dark');
+  const css = mode => Object.entries(mode).map(([k, v]) => `  --${k.replace(/[A-Z]/g, m => '-' + m.toLowerCase())}: ${v};`).join('\n');
+  return {
+    base: { hex: baseHex, oklch: { L: +b.L.toFixed(3), C: +b.C.toFixed(3), H: +H.toFixed(1) } },
+    colors: light, dark, scale, fonts, radius,
+    checks: {
+      textOnBg: +contrast(light.text, light.background).toFixed(2),
+      mutedOnBg: +contrast(light.muted, light.background).toFixed(2),
+      onAccent: +contrast(light.onAccent, light.accent).toFixed(2),
+      accentOnBg: +contrast(light.accent, light.background).toFixed(2),
+    },
+    css: `:root {\n${css(light)}\n  --radius: ${radius};\n}\n.dark {\n${css(dark)}\n}`,
+  };
+}
+
+
+const products=[["Ara Sofa","Linen blend, modular","₹58,999"],["Cassini Armchair","Performance velvet","₹24,999"],["Meher Dining Table","Solid teak","₹39,999"],["Sutra Coffee Table","Mango wood, brass","₹11,499"]];
+document.getElementById('grid').innerHTML=products.map(p=>'<div class="card"><div class="ph"></div><b>'+p[0]+'</b><span>'+p[1]+' · '+p[2]+'</span><div class="sw"><i style="background:var(--accent)"></i><i style="background:var(--sand)"></i><i style="background:var(--secondary)"></i></div></div>').join('');
+document.querySelectorAll('.tabs h3').forEach(h=>h.onclick=()=>{document.querySelectorAll('.tabs h3').forEach(x=>x.classList.remove('on'));h.classList.add('on')});
+const rl=document.querySelectorAll('#roomList li');
+rl.forEach(li=>li.onmouseenter=()=>{rl.forEach(x=>x.classList.remove('on'));li.classList.add('on');document.getElementById('roomImg').textContent=li.textContent+' photo placeholder'});
+function apply(hex){const t=generateTheme(hex),c=t.colors,r=document.documentElement.style;
+ const map={bg:c.background,surface:c.surface,sand:c.sand,border:c.border,text:c.text,muted:c.muted,accent:c.accent,'accent-dark':c.accentDark,'accent-soft':c.accentSoft,'on-accent':c.onAccent,secondary:c.secondary,radius:t.radius};
+ for(const k in map)r.setProperty('--'+k,map[k]);document.getElementById('hexOut').textContent=hex.toUpperCase()}
+document.getElementById('base').addEventListener('input',e=>apply(e.target.value));
+apply('#4E7FD9');
+</script>
+</body>
+</html>

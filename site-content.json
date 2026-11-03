@@ -1,0 +1,198 @@
+{
+  "_note": "Sample content for cold-sales demo. Brand name, products, prices, reviews and contact details are placeholders - swap with the prospect's real data before sending.",
+  "meta": {
+    "brand": "Ashray Living",
+    "tagline": "Solid wood furniture, made to be lived in.",
+    "title": "Ashray Living | Handcrafted Solid Wood Furniture",
+    "description": "Sheesham and teak furniture crafted by master artisans. Free delivery, free assembly, 5-year warranty.",
+    "locale": "en-IN",
+    "currency": "INR"
+  },
+  "theme": {
+    "style": "Warm DTC with Indian retail clarity",
+    "colors": {
+      "background": "#FAF6F0",
+      "surface": "#FFFFFF",
+      "sand": "#EADDC8",
+      "text": "#2B2622",
+      "muted": "#7A6F66",
+      "accent": "#C4572F",
+      "accentDark": "#9C4222",
+      "olive": "#6B7050"
+    },
+    "fonts": {
+      "heading": "Fraunces",
+      "body": "Inter",
+      "regional": "Noto Sans Devanagari"
+    },
+    "radius": "6px",
+    "imageStyle": "Warm natural light, staged Indian living rooms, close-ups of wood grain"
+  },
+  "announcementBar": {
+    "text": "Festive offer: up to 30% off + free assembly across India",
+    "cta": { "label": "Shop the sale", "href": "/sale" }
+  },
+  "nav": {
+    "links": [
+      { "label": "Living", "href": "/living", "children": ["Sofas", "Coffee Tables", "TV Units", "Bookshelves"] },
+      { "label": "Bedroom", "href": "/bedroom", "children": ["Beds", "Wardrobes", "Side Tables", "Dressers"] },
+      { "label": "Dining", "href": "/dining", "children": ["Dining Sets", "Chairs", "Crockery Units", "Bar Units"] },
+      { "label": "Office", "href": "/office", "children": ["Desks", "Chairs", "Storage"] },
+      { "label": "Custom", "href": "/custom" },
+      { "label": "Stores", "href": "/stores" }
+    ],
+    "utility": ["Track order", "Help", "Wishlist", "Cart"],
+    "search": { "placeholder": "Search sofas, beds, dining sets...", "trending": ["Sheesham bed", "6-seater dining", "TV unit"] }
+  },
+  "hero": {
+    "eyebrow": "New collection",
+    "headline": "Furniture that grows old with you.",
+    "subheadline": "Solid sheesham and teak, joined by hand, finished to last generations.",
+    "primaryCta": { "label": "Shop the collection", "href": "/collections/new" },
+    "secondaryCta": { "label": "Book a free design visit", "href": "/design-visit" },
+    "image": { "src": "/img/hero-living-room.jpg", "alt": "Sheesham sofa and coffee table in a sunlit living room" },
+    "trustStrip": ["4.8/5 from 12,000+ reviews", "Free delivery & assembly", "5-year warranty"]
+  },
+  "categories": {
+    "title": "Shop by room",
+    "items": [
+      { "name": "Living Room", "href": "/living", "image": "/img/cat-living.jpg", "count": 120 },
+      { "name": "Bedroom", "href": "/bedroom", "image": "/img/cat-bedroom.jpg", "count": 95 },
+      { "name": "Dining", "href": "/dining", "image": "/img/cat-dining.jpg", "count": 70 },
+      { "name": "Home Office", "href": "/office", "image": "/img/cat-office.jpg", "count": 45 },
+      { "name": "Storage", "href": "/storage", "image": "/img/cat-storage.jpg", "count": 60 },
+      { "name": "Outdoor", "href": "/outdoor", "image": "/img/cat-outdoor.jpg", "count": 30 }
+    ]
+  },
+  "featuredProducts": {
+    "title": "Most loved this season",
+    "cta": { "label": "View all", "href": "/bestsellers" },
+    "items": [
+      {
+        "name": "Kaveri 3-Seater Sofa",
+        "material": "Sheesham wood, linen blend",
+        "price": 38999,
+        "mrp": 52999,
+        "badge": "Bestseller",
+        "rating": 4.8,
+        "reviews": 1240,
+        "colors": ["Oat", "Olive", "Terracotta"],
+        "images": ["/img/p-sofa-1.jpg", "/img/p-sofa-2.jpg"]
+      },
+      {
+        "name": "Arya King Bed with Storage",
+        "material": "Solid sheesham, walnut finish",
+        "price": 44999,
+        "mrp": 61999,
+        "badge": "Free assembly",
+        "rating": 4.7,
+        "reviews": 860,
+        "colors": ["Walnut", "Honey"],
+        "images": ["/img/p-bed-1.jpg", "/img/p-bed-2.jpg"]
+      },
+      {
+        "name": "Meher 6-Seater Dining Set",
+        "material": "Teak wood, cane backrest",
+        "price": 54999,
+        "mrp": 74999,
+        "badge": "New",
+        "rating": 4.9,
+        "reviews": 410,
+        "colors": ["Natural teak"],
+        "images": ["/img/p-dining-1.jpg", "/img/p-dining-2.jpg"]
+      },
+      {
+        "name": "Sutra Round Coffee Table",
+        "material": "Mango wood, brass inlay",
+        "price": 11499,
+        "mrp": 15999,
+        "badge": "Ready to ship",
+        "rating": 4.6,
+        "reviews": 530,
+        "colors": ["Natural", "Black"],
+        "images": ["/img/p-table-1.jpg", "/img/p-table-2.jpg"]
+      }
+    ]
+  },
+  "promoBanner": {
+    "headline": "Furnish your whole home. Save up to 30%.",
+    "body": "Bundle a bed, wardrobe and side tables and get free assembly plus a complimentary design consultation.",
+    "cta": { "label": "Build a bundle", "href": "/bundles" },
+    "image": "/img/promo-bedroom.jpg"
+  },
+  "valueProps": {
+    "title": "Why Ashray",
+    "items": [
+      { "icon": "tree", "title": "Real solid wood", "text": "No particle board. Every piece is kiln-dried sheesham, teak or mango." },
+      { "icon": "hand", "title": "Made by artisans", "text": "Built by master carpenters in our own workshop, not a faceless factory." },
+      { "icon": "truck", "title": "Free delivery & assembly", "text": "White-glove delivery to 300+ cities with expert installation." },
+      { "icon": "shield", "title": "5-year warranty", "text": "Plus 7-day easy returns on every order." },
+      { "icon": "ruler", "title": "Made to your size", "text": "Custom dimensions and finishes at no surprise cost." }
+    ]
+  },
+  "craftStory": {
+    "eyebrow": "Our craft",
+    "headline": "From forest to your living room, in 45 days.",
+    "body": "We source certified timber, season it for months, and hand-join every piece with traditional mortise-and-tenon joints. You can see the grain, feel the weight, and trust it will last.",
+    "steps": ["Certified timber", "Kiln seasoning", "Hand joinery", "Natural finish", "Quality check", "Doorstep delivery"],
+    "cta": { "label": "See how we make it", "href": "/craft" },
+    "image": "/img/craft-workshop.jpg"
+  },
+  "inspiration": {
+    "title": "Real homes, real rooms",
+    "subtitle": "Share your space with #AshrayHome",
+    "images": ["/img/ugc-1.jpg", "/img/ugc-2.jpg", "/img/ugc-3.jpg", "/img/ugc-4.jpg", "/img/ugc-5.jpg", "/img/ugc-6.jpg"]
+  },
+  "tools": {
+    "title": "Plan before you buy",
+    "items": [
+      { "name": "View in your room (AR)", "text": "Place any product in your space using your phone camera.", "href": "/ar" },
+      { "name": "Free design consultation", "text": "A designer visits or video-calls, then sends a layout in 48 hours.", "href": "/design-visit" },
+      { "name": "Custom size builder", "text": "Choose dimensions, wood and finish with live pricing.", "href": "/custom" }
+    ]
+  },
+  "testimonials": {
+    "title": "Loved by 50,000+ homes",
+    "items": [
+      { "quote": "The sofa feels like it came from a boutique, at half the price. Delivery and assembly were flawless.", "name": "Priya S.", "city": "Bengaluru", "product": "Kaveri Sofa", "rating": 5 },
+      { "quote": "We customised our dining table to fit a tiny flat. It looks and feels premium.", "name": "Rohan M.", "city": "Mumbai", "product": "Meher Dining Set", "rating": 5 },
+      { "quote": "Solid wood, heavy and sturdy. Exactly as shown in the photos.", "name": "Ananya K.", "city": "Delhi", "product": "Arya Bed", "rating": 5 }
+    ],
+    "press": ["Economic Times", "Architectural Digest India", "YourStory", "Elle Decor"]
+  },
+  "stores": {
+    "title": "Touch it before you buy it",
+    "text": "Visit one of our experience centres in 25 cities.",
+    "cta": { "label": "Find your nearest store", "href": "/stores" },
+    "secondaryCta": { "label": "Book an appointment", "href": "/appointment" },
+    "cities": ["Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Pune", "Ahmedabad"]
+  },
+  "newsletter": {
+    "headline": "Get 10% off your first order",
+    "text": "Join for design ideas, new arrivals and festive offers.",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "consent": "No spam. Unsubscribe anytime."
+  },
+  "faq": [
+    { "q": "Is it really solid wood?", "a": "Yes. Every frame is solid sheesham, teak or mango. Engineered wood is only used where labelled." },
+    { "q": "How long does delivery take?", "a": "Ready-to-ship items arrive in 5-7 days. Made-to-order pieces take 3-5 weeks." },
+    { "q": "Do you offer EMI?", "a": "Yes, no-cost EMI from 3 to 12 months on major cards." },
+    { "q": "Can I return an item?", "a": "You can return within 7 days if it is unused and in original condition." }
+  ],
+  "footer": {
+    "columns": [
+      { "title": "Shop", "links": ["Living", "Bedroom", "Dining", "Office", "Sale"] },
+      { "title": "Help", "links": ["Track order", "Delivery", "Returns", "Warranty", "Contact"] },
+      { "title": "Company", "links": ["Our craft", "Stores", "Careers", "Press", "Bulk orders"] }
+    ],
+    "contact": { "phone": "+91 00000 00000", "email": "hello@example.com", "hours": "Mon-Sat, 10am-7pm" },
+    "payments": ["UPI", "Visa", "Mastercard", "RuPay", "Net banking", "EMI", "COD"],
+    "social": ["Instagram", "Facebook", "YouTube", "Pinterest"],
+    "legal": "© 2026 Ashray Living. All rights reserved."
+  },
+  "seo": {
+    "keywords": ["solid wood furniture", "sheesham furniture online", "teak dining set", "custom furniture India"],
+    "schema": ["Organization", "LocalBusiness", "Product", "BreadcrumbList", "FAQPage"]
+  }
+}
